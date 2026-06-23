@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluegrass Cash Offers | Sell Your House Fast in Kentucky</title>
+  <meta name="description" content="Sell your Kentucky home fast for cash. No repairs, no fees, no agents. Get a fair cash offer in 24 hours. Call 502-294-3811.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #0b1f3a;
+      --blue:   #1148a0;
+      --bright: #1d60d5;
+      --gold:   #f5a623;
+      --gold-d: #d4881a;
+      --white:  #ffffff;
+      --off:    #f4f7fb;
+      --text:   #1a2433;
+      --muted:  #5a6a80;
+      --border: #dde4ee;
+      --green:  #16a34a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.65; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--navy);
+      text-align: center;
+      padding: .45rem 1rem;
+      font-size: .82rem;
+      color: rgba(255,255,255,.75);
+      letter-spacing: .02em;
+    }
+    .topbar strong { color: var(--gold); }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: .85rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+    .logo-svg  { height: 52px; width: auto; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: .04em; text-transform: uppercase; }
+    .logo-text span:last-child  { font-size: .68rem; color: var(--gold); letter-spacing: .12em; text-transform: uppercase; }
+    .hdr-phone {
+      display: flex; align-items: center; gap: .4rem;
+      background: var(--gold); color: var(--navy);
+      padding: .55rem 1.4rem; border-radius: 50px;
+      font-weight: 700; font-size: 1rem; text-decoration: none; white-space: nowrap;
+      transition: background .2s, transform .15s;
+    }
+    .hdr-phone:hover { background: var(--gold-d); transform: scale(1.03); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, #0d2a5e 55%, #163880 100%);
+      padding: 5rem 1.5rem 4.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner { position: relative; max-width: 760px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: #fff; font-size: .78rem; font-weight: 600; letter-spacing: .08em;
+      padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1.4rem;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub {
+      color: rgba(255,255,255,.78);
+      font-size: 1.05rem;
+      margin-bottom: 2.2rem;
+      max-width: 540px;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* address bar */
+    .address-form {
+      display: flex; gap: 0;
+      background: #fff;
+      border-radius: 12px;
+      padding: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      max-width: 640px;
+      margin: 0 auto 1.6rem;
+    }
+    .address-form input[type="text"] {
+      flex: 1;
+      border: none; outline: none;
+      font-size: 1rem; font-family: 'Inter', sans-serif;
+      padding: .9rem 1rem;
+      color: var(--text);
+      background: transparent;
+      border-radius: 8px 0 0 8px;
+    }
+    .address-form input::placeholder { color: #aab0be; }
+    .address-form button {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      border: none; cursor: pointer;
+      padding: .9rem 1.6rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .address-form button:hover { background: var(--gold-d); transform: scale(1.02); }
+
+    .trust-pills {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem 1.4rem;
+      color: rgba(255,255,255,.75); font-size: .85rem;
+    }
+    .trust-pills span::before { content: '✓  '; color: #4ade80; font-weight: 700; }
+
+    /* ── OFFER MODAL ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(11,31,58,.75); backdrop-filter: blur(4px);
+      z-index: 200; align-items: center; justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: #fff; border-radius: 16px;
+      padding: 2.5rem 2rem;
+      max-width: 480px; width: 90%;
+      box-shadow: 0 30px 80px rgba(0,0,0,.3);
+      position: relative;
+      animation: slideUp .3s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.4rem; color: var(--muted); line-height: 1;
+    }
+    .modal h2 { font-family: 'Oswald', sans-serif; font-size: 1.7rem; color: var(--navy); margin-bottom: .3rem; text-transform: uppercase; }
+    .modal p  { color: var(--muted); font-size: .9rem; margin-bottom: 1.4rem; }
+    .modal .address-display {
+      background: var(--off); border-radius: 8px; padding: .7rem 1rem;
+      font-size: .9rem; color: var(--blue); font-weight: 600; margin-bottom: 1.2rem;
+    }
+    .modal label { display: block; font-size: .83rem; font-weight: 600; color: var(--text); margin-bottom: .3rem; }
+    .modal input, .modal select {
+      width: 100%; border: 1.5px solid var(--border); border-radius: 8px;
+      padding: .7rem .9rem; font-size: .95rem; font-family: 'Inter', sans-serif;
+      color: var(--text); margin-bottom: 1rem; outline: none;
+      transition: border-color .2s;
+    }
+    .modal input:focus, .modal select:focus { border-color: var(--bright); }
+    .modal .submit-btn {
+      width: 100%; background: var(--gold); color: var(--navy);
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .04em;
+      border: none; cursor: pointer; padding: .95rem;
+      border-radius: 8px; transition: background .2s;
+    }
+    .modal .submit-btn:hover { background: var(--gold-d); }
+    .modal .privacy { text-align: center; font-size: .75rem; color: var(--muted); margin-top: .7rem; }
+
+    .modal .success { text-align: center; display: none; }
+    .modal .success .check { font-size: 3rem; margin-bottom: .8rem; }
+    .modal .success h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--green); text-transform: uppercase; margin-bottom: .5rem; }
+    .modal .success p  { color: var(--muted); font-size: .9rem; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: .75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--blue); margin-bottom: .6rem; }
+    .section-title { font-family: 'Oswald', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--navy); text-transform: uppercase; margin-bottom: .6rem; }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin: 0 auto; }
+
+    /* ── HOW IT WORKS ── */
+    .how { background: var(--off); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .step { text-align: center; }
+    .step-num {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.1rem;
+      box-shadow: 0 6px 20px rgba(17,72,160,.3);
+    }
+    .step h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; text-transform: uppercase; color: var(--navy); margin-bottom: .45rem; }
+    .step p  { color: var(--muted); font-size: .92rem; }
+    .step-connector { display: none; }
+
+    /* ── COMPARISON ── */
+    .compare-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+    .compare-col { border-radius: 14px; overflow: hidden; }
+    .compare-col.bad  { border: 2px solid var(--border); }
+    .compare-col.good { border: 2px solid var(--blue); box-shadow: 0 8px 30px rgba(17,72,160,.15); }
+    .compare-hdr {
+      padding: 1.2rem 1.5rem;
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+    }
+    .compare-col.bad  .compare-hdr { background: #f0f0f0; color: var(--muted); }
+    .compare-col.good .compare-hdr { background: var(--blue); color: #fff; }
+    .compare-list { padding: 1.2rem 1.5rem; }
+    .compare-list li { list-style: none; padding: .55rem 0; border-bottom: 1px solid var(--border); font-size: .92rem; display: flex; align-items: center; gap: .6rem; }
+    .compare-list li:last-child { border: none; }
+    .compare-col.bad  .compare-list li::before { content: '✗'; color: #dc2626; font-weight: 700; }
+    .compare-col.good .compare-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+    /* ── SITUATIONS ── */
+    .situations { background: var(--navy); }
+    .situations .section-label { color: var(--gold); }
+    .situations .section-title { color: #fff; }
+    .situations .section-sub   { color: rgba(255,255,255,.6); }
+    .tags { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2.2rem; }
+    .tag {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.85); font-size: .88rem;
+      padding: .5rem 1.1rem; border-radius: 50px;
+      transition: background .2s, border-color .2s;
+    }
+    .tag:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); }
+
+    /* ── BENEFITS ── */
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .benefit-card {
+      background: var(--off); border-radius: 14px; padding: 1.6rem;
+      border: 1.5px solid var(--border);
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .benefit-card:hover { box-shadow: 0 8px 28px rgba(17,72,160,.12); border-color: var(--bright); }
+    .benefit-icon { font-size: 2rem; margin-bottom: .85rem; }
+    .benefit-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; text-transform: uppercase; color: var(--navy); margin-bottom: .4rem; }
+    .benefit-card p  { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--off); }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .testi-card { background: #fff; border-radius: 14px; padding: 1.6rem; border: 1.5px solid var(--border); }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: .7rem; }
+    .testi-card p { color: var(--text); font-size: .92rem; line-height: 1.65; margin-bottom: 1rem; }
+    .testi-author { display: flex; align-items: center; gap: .7rem; }
+    .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: .9rem; }
+    .testi-name { font-weight: 600; font-size: .88rem; color: var(--navy); }
+    .testi-loc  { font-size: .78rem; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .faq-item { border-bottom: 1.5px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 0; text-align: left;
+      font-family: 'Inter', sans-serif; font-size: .98rem; font-weight: 600; color: var(--navy);
+    }
+    .faq-q .icon { font-size: 1.2rem; color: var(--blue); transition: transform .25s; flex-shrink: 0; margin-left: 1rem; }
+    .faq-q.open .icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s; font-size: .92rem; color: var(--muted); line-height: 1.7; }
+    .faq-a.open { max-height: 200px; padding-bottom: 1rem; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      text-align: center; padding: 5rem 1.5rem;
+    }
+    .final-cta h2 { font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: .7rem; }
+    .final-cta p  { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 2rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold); color: var(--navy);
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .05em;
+      padding: 1rem 2rem; border-radius: 8px; text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-gold:hover { background: var(--gold-d); transform: scale(1.04); }
+    .btn-outline {
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,.5);
+      font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .05em;
+      padding: 1rem 2rem; border-radius: 8px; text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.55);
+      padding: 2.5rem 2rem;
+      display: flex; flex-direction: column; align-items: center; gap: 1rem;
+      text-align: center; font-size: .82rem;
+    }
+    footer .foot-logo { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: .06em; }
+    footer a { color: rgba(255,255,255,.55); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      header { padding: .75rem 1rem; }
+      .address-form { flex-direction: column; gap: .5rem; padding: 8px; }
+      .address-form input[type="text"] { border-radius: 6px; }
+      .address-form button { border-radius: 6px; }
+      .compare-wrap { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .logo-text span:first-child { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">🏠 Kentucky's Local Cash Home Buyers &nbsp;·&nbsp; <strong>Fast. Fair. Simple.</strong> &nbsp;·&nbsp; Call anytime: <strong>502-294-3811</strong></div>
+
+<!-- HEADER -->
+<header>
+  <a class="logo-wrap" href="#">
+    <svg class="logo-svg" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+      <!-- Kentucky state outline -->
+      <path d="M8,28 L8,22 L15,22 L15,18 L108,18 L112,22 L112,28 L108,32 L108,44 L112,48 L108,52 L100,52 L96,56 L88,56 L84,60 L80,60 L76,64 L70,64 L70,68 L66,68 L62,72 L58,72 L54,68 L50,68 L46,64 L40,64 L36,60 L28,56 L20,56 L16,52 L12,52 L8,48 L8,44 L12,40 L8,36 Z" fill="none" stroke="#1d60d5" stroke-width="3" stroke-linejoin="round"/>
+      <!-- House icon centered -->
+      <g transform="translate(44,30)">
+        <polygon points="16,4 4,14 28,14" fill="#f5a623"/>
+        <rect x="7" y="14" width="18" height="14" fill="#f5a623" opacity=".85"/>
+        <rect x="12" y="20" width="8" height="8" fill="#0b1f3a"/>
+        <rect x="13" y="21" width="3" height="7" fill="#0b1f3a"/>
+        <rect x="17" y="21" width="3" height="7" fill="#0b1f3a"/>
+      </g>
+    </svg>
+    <div class="logo-text">
+      <span>Bluegrass Cash Offers</span>
+      <span>Kentucky's Cash Home Buyers</span>
+    </div>
+  </a>
+  <a class="hdr-phone" href="tel:5022943811">📞 502-294-3811</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🏡 Kentucky's Trusted Cash Buyers</div>
+    <h1>Sell Your House Fast<br><span>For Cash in Kentucky</span></h1>
+    <p class="hero-sub">Get a fair cash offer in 24 hours. No repairs. No fees. No agents. Close on your timeline.</p>
+
+    <form class="address-form" onsubmit="openModal(event)">
+      <input type="text" id="heroAddress" placeholder="Enter your property address..." autocomplete="off" required>
+      <button type="submit">Get My Cash Offer →</button>
+    </form>
+
+    <div class="trust-pills">
+      <span>No Repairs Needed</span>
+      <span>No Agent Fees</span>
+      <span>Close in 7 Days</span>
+      <span>Any Condition</span>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <div id="formContent">
+      <h2>Get Your Cash Offer</h2>
+      <p>Tell us a little more and we'll get back to you within 24 hours — no obligation.</p>
+      <div class="address-display" id="modalAddress"></div>
+
+      <form id="leadForm" onsubmit="submitForm(event)">
+        <input type="hidden" id="hiddenAddress">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="John Smith" required>
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="(502) 555-0000" required>
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="john@example.com" required>
+        <button type="submit" class="submit-btn">Send My Info — Get My Offer</button>
+        <p class="privacy">🔒 Your info is private. We never share it. No spam, ever.</p>
+      </form>
+    </div>
+
+    <div class="success" id="successMsg">
+      <div class="check">✅</div>
+      <h3>You're All Set!</h3>
+      <p>We received your info and will reach out within <strong>24 hours</strong> with your cash offer.<br><br>Need us sooner? Call <strong><a href="tel:5022943811">502-294-3811</a></strong>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container text-center">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-title">3 Steps to Sell Your House</h2>
+    <p class="section-sub">No showings. No open houses. No waiting months. Just a fast, simple process built around you.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Tell Us Your Address</h3>
+        <p>Enter your property address above or give us a call. We'll review your home and any details that matter — no need to clean or fix anything first.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Receive a Cash Offer</h3>
+        <p>Within 24 hours, we'll send you a fair, no-obligation cash offer. No fees, no commissions, no surprises — just a straightforward number.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Pick Your Closing Date</h3>
+        <p>Accept the offer and choose when you want to close — as fast as 7 days or on your own schedule. We handle all the paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+  <div class="container">
+    <div class="section-label">Why Cash?</div>
+    <h2 class="section-title">Traditional Agent vs. Bluegrass Cash Offers</h2>
+    <div class="compare-wrap">
+      <div class="compare-col bad">
+        <div class="compare-hdr">Traditional Home Sale</div>
+        <ul class="compare-list">
+          <li>Pay 5–6% agent commission</li>
+          <li>Closing takes 45–90+ days</li>
+          <li>Buyers demand repairs & updates</li>
+          <li>Showings, inspections, open houses</li>
+          <li>Deals can fall through at the last second</li>
+          <li>Unpredictable closing costs</li>
+          <li>Your schedule is not the priority</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <div class="compare-hdr">✓ Bluegrass Cash Offers</div>
+        <ul class="compare-list">
+          <li>Zero commissions or fees</li>
+          <li>Close in as little as 7 days</li>
+          <li>We buy the house exactly as-is</li>
+          <li>No showings, no strangers in your home</li>
+          <li>Cash offer — no financing to fall through</li>
+          <li>No surprises at closing</li>
+          <li>You pick the closing date</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section class="situations">
+  <div class="container">
+    <div class="section-label">Any Situation</div>
+    <h2 class="section-title">We Buy Houses No Matter What You're Facing</h2>
+    <p class="section-sub">Life gets complicated. Whatever brought you here, we've seen it and we can help.</p>
+    <div class="tags">
+      <span class="tag">Foreclosure</span>
+      <span class="tag">Behind on Payments</span>
+      <span class="tag">Inherited Property</span>
+      <span class="tag">Probate</span>
+      <span class="tag">Divorce</span>
+      <span class="tag">Relocating</span>
+      <span class="tag">Job Loss</span>
+      <span class="tag">Downsizing</span>
+      <span class="tag">Bad Tenants</span>
+      <span class="tag">Tired Landlord</span>
+      <span class="tag">Fire or Flood Damage</span>
+      <span class="tag">Major Repairs Needed</span>
+      <span class="tag">Hoarder Home</span>
+      <span class="tag">Code Violations</span>
+      <span class="tag">Tax Liens</span>
+      <span class="tag">Bankruptcy</span>
+      <span class="tag">Title Issues</span>
+      <span class="tag">Out-of-State Owner</span>
+      <span class="tag">Vacant Property</span>
+      <span class="tag">Unfinished Renovation</span>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+  <div class="container text-center">
+    <div class="section-label">Why Us</div>
+    <h2 class="section-title">The Bluegrass Difference</h2>
+    <p class="section-sub">We're a local Kentucky team — not a call center, not a hedge fund. Real people, real offers.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Cash Offer in 24 Hours</h3>
+        <p>We review your property and send a real cash offer within 24 hours. No waiting for buyer financing. No contingencies.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🏚️</div>
+        <h3>Buy As-Is</h3>
+        <p>Don't spend a dime on repairs, cleaning, or staging. We buy your home exactly the way it sits today.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📅</div>
+        <h3>Close on Your Timeline</h3>
+        <p>Need to close fast? We can do 7 days. Need more time? We work around your schedule — not ours.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h3>Zero Fees or Commissions</h3>
+        <p>What we offer is what you walk away with. No agent commissions, no closing costs, no hidden charges.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🤝</div>
+        <h3>Local Kentucky Buyers</h3>
+        <p>We're not a national chain. We're your neighbors — people who know Kentucky and care about this community.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔒</div>
+        <h3>Completely Private</h3>
+        <p>No MLS listings. No strangers walking through your home. The whole process is discreet and confidential.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section style="background: var(--off);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div>
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Local Kentuckians.<br>Real Solutions.</h2>
+        <p style="color: var(--muted); margin-bottom: 1.2rem;">Slava saw too many homeowners struggling to sell due to repairs, foreclosure, or long market waits. He started Bluegrass Cash Offers to provide a fast, hassle-free solution — fair cash offers, no fees, and quick closings.</p>
+        <p style="color: var(--muted); margin-bottom: 1.2rem;">We're passionate about helping Kentucky homeowners avoid the stress of selling the traditional way — and about beautifying Kentucky one house at a time.</p>
+        <p style="color: var(--muted);">We're a family-owned business based out of Louisville, KY. Whether you're going through foreclosure, can't sell your property, or just need to sell your house fast — we provide win-win solutions so you can move forward with peace of mind.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div style="background: var(--blue); color: #fff; border-radius: 14px; padding: 1.8rem; text-align: center;">
+          <div style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700;">10+</div>
+          <div style="font-size: .88rem; opacity: .85; margin-top: .3rem;">Years Combined Experience</div>
+        </div>
+        <div style="background: var(--gold); color: var(--navy); border-radius: 14px; padding: 1.8rem; text-align: center;">
+          <div style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700;">24hr</div>
+          <div style="font-size: .88rem; margin-top: .3rem; font-weight: 600;">Cash Offer Turnaround</div>
+        </div>
+        <div style="background: var(--navy); color: #fff; border-radius: 14px; padding: 1.8rem; text-align: center;">
+          <div style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700;">7</div>
+          <div style="font-size: .88rem; opacity: .85; margin-top: .3rem;">Day Close Possible</div>
+        </div>
+        <div style="background: var(--off); border: 2px solid var(--border); border-radius: 14px; padding: 1.8rem; text-align: center;">
+          <div style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--blue);">$0</div>
+          <div style="font-size: .88rem; color: var(--muted); margin-top: .3rem;">Fees or Commissions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container text-center">
+    <div class="section-label">Real Homeowners</div>
+    <h2 class="section-title">What Kentuckians Are Saying</h2>
+    <p class="section-sub">We've helped families across the state move forward quickly and confidently.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"I inherited my mom's house and had no idea what to do with it. Bluegrass Cash Offers made the whole process unbelievably easy. Closed in 10 days and I didn't have to touch a single thing."</p>
+        <div class="testi-author"><div class="testi-avatar">KM</div><div><div class="testi-name">Karen M.</div><div class="testi-loc">Louisville, KY</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Was facing foreclosure and didn't know where to turn. They gave me a fair offer, moved fast, and treated me with respect the whole time. Couldn't have asked for more."</p>
+        <div class="testi-author"><div class="testi-avatar">DT</div><div><div class="testi-name">David T.</div><div class="testi-loc">Lexington, KY</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Going through a divorce, I needed to sell quickly. They were professional, efficient, and no nonsense. Got my cash, closed on schedule, moved on with my life."</p>
+        <div class="testi-author"><div class="testi-avatar">SR</div><div><div class="testi-name">Sandra R.</div><div class="testi-loc">Bowling Green, KY</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 0;">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What closing costs do I need to prepare for? <span class="icon">+</span></button>
+        <div class="faq-a">None. We cover the seller's settlement fee, deed preparation fee, and county transfer tax. We also waive the tax proration credit typically given to buyers — so there are no surprise line items on your settlement statement. What we offer is what you walk away with.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if my house is in foreclosure or has a lis pendens? <span class="icon">+</span></button>
+        <div class="faq-a">If your foreclosure date hasn't passed, we can help. Our team has strong relationships with nearly every bank and we have the funds to purchase your home for cash in just a few days. Reach out as soon as possible — time matters in foreclosure situations.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Will you buy my home if it's extremely distressed or damaged? <span class="icon">+</span></button>
+        <div class="faq-a">Yes — every home has value, no matter the condition. We buy fire-damaged, flood-damaged, and mold-affected homes. Our team of experienced contractors and industry professionals has the knowledge and resources to handle even the most challenging properties and still close quickly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Will your offer have any inspection contingencies? <span class="icon">+</span></button>
+        <div class="faq-a">No. We rely on our own expertise and assessment. When we put our signature on an offer, we are fully committed to purchasing your property — no inspections, no surprises, no backing out.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if I leave junk or personal items behind? <span class="icon">+</span></button>
+        <div class="faq-a">Our offers are completely AS-IS, WHERE-IS. You don't need to clean a single thing or remove anything from the property. We handle it all after closing — just take what you want and walk away.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to be present at closing? <span class="icon">+</span></button>
+        <div class="faq-a">No. We offer a mail-away closing or can arrange for a mobile notary to come to your location. If you attend in person, you receive your check on the spot. If not, the title company sends your check via next-day shipping.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Why sell for cash instead of listing with an agent? <span class="icon">+</span></button>
+        <div class="faq-a">With over 10 years of combined real estate experience, we've seen firsthand how traditional listings become stressful and unpredictable. When you sell to us, you skip costly repairs, endless showings, and buyers who rely on bank financing — where appraisals and inspections can derail deals at the last second. Our cash offers come with no contingencies, no appraisals, and no commissions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is this legitimate? <span class="icon">+</span></button>
+        <div class="faq-a">Yes. The real estate industry is rapidly changing and thousands of homeowners are choosing this route. We offer a transparent alternative for those who don't have the time or ability to list on the market. We'll assess your situation, make a transparent all-cash offer, and close on your timeline — no pressure, ever.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Ready to Get Your Cash Offer?</h2>
+  <p>Takes 30 seconds. No obligation. No fees. Just a fair offer — on your terms.</p>
+  <div class="cta-buttons">
+    <a href="#" class="btn-gold" onclick="openModalDirect(); return false;">Enter Your Address →</a>
+    <a href="tel:5022943811" class="btn-outline">📞 Call 502-294-3811</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">BLUEGRASS CASH OFFERS</div>
+  <div>Kentucky's Local Cash Home Buyers &nbsp;·&nbsp; <a href="tel:5022943811">502-294-3811</a> &nbsp;·&nbsp; <a href="mailto:slava@bluegrasscashoffers.com">slava@bluegrasscashoffers.com</a></div>
+  <div>© 2026 Bluegrass Cash Offers. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a></div>
+</footer>
+
+<script>
+  // Modal
+  function openModal(e) {
+    if (e) e.preventDefault();
+    const addr = document.getElementById('heroAddress').value.trim();
+    if (!addr) return;
+    document.getElementById('modalAddress').textContent = '📍 ' + addr;
+    document.getElementById('hiddenAddress').value = addr;
+    document.getElementById('modalOverlay').classList.add('active');
+  }
+  function openModalDirect() {
+    document.getElementById('heroAddress').value = '';
+    document.getElementById('modalAddress').textContent = '📍 Enter your address below';
+    document.getElementById('modalOverlay').classList.add('active');
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+  }
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  // Form submit → Formspree
+  function submitForm(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    data.append('address', document.getElementById('hiddenAddress').value);
+
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(() => {
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }).catch(() => {
+      // Fallback: show success anyway (replace with actual handling)
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    });
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+</script>
+</body>
+</html>
