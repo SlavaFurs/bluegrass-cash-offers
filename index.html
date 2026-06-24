@@ -7,7 +7,7 @@
   <meta name="description" content="Sell your Kentucky home fast for cash. No repairs, no fees, no agents. Get a fair cash offer in 24 hours. Call 502-294-3811.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -46,7 +46,7 @@
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
     .logo-wrap { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
-    .logo-svg  { height: 52px; width: auto; }
+    .logo-svg  { height: 56px; width: 56px; flex-shrink: 0; }
     .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
     .logo-text span:first-child { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: .04em; text-transform: uppercase; }
     .logo-text span:last-child  { font-size: .68rem; color: var(--gold); letter-spacing: .12em; text-transform: uppercase; }
@@ -341,17 +341,64 @@
 <!-- HEADER -->
 <header>
   <a class="logo-wrap" href="#">
-    <svg class="logo-svg" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
-      <!-- Kentucky state outline (accurate) -->
-      <path d="M86.4,26.2 L89.8,28.7 L92.1,27.4 L97.7,28.8 L99.3,27.0 L101.4,26.4 L102.1,29.5 L103.8,30.0 L105.8,32.5 L105.4,38.1 L107.2,41.6 L109.5,44.3 L110.2,46.4 L113.1,48.5 L115.0,48.8 L109.3,53.8 L103.9,56.5 L103.9,57.9 L101.7,59.1 L101.6,60.7 L98.7,61.4 L97.8,63.5 L89.8,66.1 L89.6,66.4 L77.0,66.2 L66.0,65.6 L63.1,65.8 L46.7,65.1 L28.1,65.5 L24.9,64.7 L25.1,68.0 L6.8,67.8 L5.0,68.0 L5.8,65.7 L8.0,66.5 L9.2,59.0 L8.5,58.0 L10.7,54.8 L12.4,54.6 L17.9,57.4 L19.7,55.9 L18.3,53.5 L18.9,51.6 L25.0,49.8 L23.6,46.6 L25.5,44.0 L26.9,42.3 L30.6,42.1 L31.9,40.8 L33.1,42.1 L35.1,41.5 L38.8,44.2 L40.0,42.3 L43.7,40.5 L44.7,42.3 L48.0,41.6 L47.8,39.6 L51.0,37.2 L51.6,39.4 L54.9,41.1 L56.6,39.9 L58.0,35.2 L60.6,34.3 L61.5,32.0 L64.0,30.5 L63.9,26.9 L67.7,27.7 L70.4,25.9 L73.0,25.8 L71.8,20.8 L72.9,20.0 L78.6,20.0 L81.6,23.8 L81.8,25.4 L86.4,26.2 Z" fill="none" stroke="#1d60d5" stroke-width="2.5" stroke-linejoin="round"/>
-      <!-- House icon centered -->
-      <g transform="translate(44,30)">
-        <polygon points="16,4 4,14 28,14" fill="#f5a623"/>
-        <rect x="7" y="14" width="18" height="14" fill="#f5a623" opacity=".85"/>
-        <rect x="12" y="20" width="8" height="8" fill="#0b1f3a"/>
-        <rect x="13" y="21" width="3" height="7" fill="#0b1f3a"/>
-        <rect x="17" y="21" width="3" height="7" fill="#0b1f3a"/>
+    <svg class="logo-svg" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="hdr-badge-clip"><circle cx="45" cy="45" r="40"/></clipPath>
+        <linearGradient id="hdr-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0f172a"/>
+          <stop offset="65%" stop-color="#0f172a"/>
+          <stop offset="100%" stop-color="#052e16"/>
+        </linearGradient>
+      </defs>
+      <!-- Gold outer ring -->
+      <circle cx="45" cy="45" r="43" fill="#92400e"/>
+      <!-- Badge fill -->
+      <circle cx="45" cy="45" r="40" fill="url(#hdr-bg)"/>
+      <!-- Dashed gold inner ring -->
+      <circle cx="45" cy="45" r="37" fill="none" stroke="#fbbf24" stroke-width=".8" stroke-dasharray="3,2"/>
+      <!-- Kentucky silhouette -->
+      <g transform="translate(3.5,24) scale(0.62)" clip-path="url(#hdr-badge-clip)">
+        <path d="M86.4,26.2 L89.8,28.7 L92.1,27.4 L97.7,28.8 L99.3,27.0 L101.4,26.4 L102.1,29.5 L103.8,30.0 L105.8,32.5 L105.4,38.1 L107.2,41.6 L109.5,44.3 L110.2,46.4 L113.1,48.5 L115.0,48.8 L109.3,53.8 L103.9,56.5 L103.9,57.9 L101.7,59.1 L101.6,60.7 L98.7,61.4 L97.8,63.5 L89.8,66.1 L89.6,66.4 L77.0,66.2 L66.0,65.6 L63.1,65.8 L46.7,65.1 L28.1,65.5 L24.9,64.7 L25.1,68.0 L6.8,67.8 L5.0,68.0 L5.8,65.7 L8.0,66.5 L9.2,59.0 L8.5,58.0 L10.7,54.8 L12.4,54.6 L17.9,57.4 L19.7,55.9 L18.3,53.5 L18.9,51.6 L25.0,49.8 L23.6,46.6 L25.5,44.0 L26.9,42.3 L30.6,42.1 L31.9,40.8 L33.1,42.1 L35.1,41.5 L38.8,44.2 L40.0,42.3 L43.7,40.5 L44.7,42.3 L48.0,41.6 L47.8,39.6 L51.0,37.2 L51.6,39.4 L54.9,41.1 L56.6,39.9 L58.0,35.2 L60.6,34.3 L61.5,32.0 L64.0,30.5 L63.9,26.9 L67.7,27.7 L70.4,25.9 L73.0,25.8 L71.8,20.8 L72.9,20.0 L78.6,20.0 L81.6,23.8 L81.8,25.4 L86.4,26.2 Z" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1"/>
       </g>
+      <!-- Bluegrass at bottom -->
+      <g clip-path="url(#hdr-badge-clip)">
+        <rect x="5" y="64" width="80" height="20" fill="#052e16"/>
+        <path d="M8,82 Q9,72 8,67" stroke="#22c55e" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M13,82 Q15,70 14,65" stroke="#0d9488" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M18,82 Q20,73 19,67" stroke="#16a34a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M23,82 Q21,71 22,65" stroke="#22c55e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M28,82 Q30,72 29,66" stroke="#4ade80" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M33,82 Q35,70 34,64" stroke="#059669" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M38,82 Q36,73 37,67" stroke="#22c55e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M43,82 Q45,71 44,65" stroke="#0d9488" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M48,82 Q50,72 49,66" stroke="#16a34a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M53,82 Q51,70 52,64" stroke="#22c55e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M58,82 Q60,73 59,67" stroke="#4ade80" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M63,82 Q65,71 64,65" stroke="#059669" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M68,82 Q66,72 67,66" stroke="#22c55e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M73,82 Q75,70 74,64" stroke="#0d9488" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M78,82 Q80,73 79,67" stroke="#16a34a" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+        <path d="M83,82 Q81,71 82,65" stroke="#22c55e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- House on KY silhouette -->
+      <g transform="translate(34,36)">
+        <polygon points="11,3 1,11 21,11" fill="#fbbf24"/>
+        <rect x="4" y="11" width="14" height="11" fill="#fde68a"/>
+        <rect x="8" y="14" width="6" height="8" rx=".5" fill="#0f172a"/>
+      </g>
+      <!-- Orange $ at top -->
+      <circle cx="45" cy="14" r="7" fill="#f97316"/>
+      <text x="45" y="18" text-anchor="middle" fill="white" font-size="10" font-family="Georgia,serif" font-weight="bold">$</text>
+      <!-- Bottom arc text -->
+      <path id="hdr-bot-arc" d="M 12,55 A 33,33 0 0,0 78,55" fill="none"/>
+      <text font-size="6" font-family="'Montserrat',sans-serif" font-weight="700" fill="#fbbf24" letter-spacing="2">
+        <textPath href="#hdr-bot-arc" startOffset="10%">CASH OFFERS · KY</textPath>
+      </text>
+      <!-- Top arc text -->
+      <path id="hdr-top-arc" d="M 10,44 A 35,35 0 0,1 80,44" fill="none"/>
+      <text font-size="5.5" font-family="'Montserrat',sans-serif" font-weight="700" fill="#94a3b8" letter-spacing="2.5">
+        <textPath href="#hdr-top-arc" startOffset="8%">· BLUEGRASS ·</textPath>
+      </text>
     </svg>
     <div class="logo-text">
       <span>Bluegrass Cash Offers</span>
