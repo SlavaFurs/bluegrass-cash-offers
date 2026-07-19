@@ -715,10 +715,8 @@
       body: data,
       headers: { 'Accept': 'application/json' }
     }).then(() => {
-      document.getElementById('formContent').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
+      window.location.href = '/thank-you';
     }).catch(() => {
-      // Fallback: show success anyway (replace with actual handling)
       document.getElementById('formContent').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
     });
