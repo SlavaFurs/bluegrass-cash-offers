@@ -410,6 +410,12 @@
 
       <form id="leadForm" onsubmit="submitForm(event)">
         <input type="hidden" id="hiddenAddress">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        <input type="hidden" name="utm_term" id="utm_term">
+        <input type="hidden" name="utm_content" id="utm_content">
+        <input type="hidden" name="gclid" id="gclid">
         <label>Your Name</label>
         <input type="text" name="name" placeholder="John Smith" required>
         <label>Phone Number</label>
@@ -682,6 +688,26 @@
 </footer>
 
 <script>
+  // Capture UTM params from URL and populate hidden fields
+  (function captureUTMs() {
+    const params = new URLSearchParams(window.location.search);
+    const fields = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+    fields.forEach(function(f) {
+      const val = params.get(f);
+      if (val) {
+        const el = document.getElementById(f);
+        if (el) el.value = val;
+        // Persist to sessionStorage so modal still has it
+        sessionStorage.setItem(f, val);
+      } else {
+        // Try sessionStorage fallback
+        const stored = sessionStorage.getItem(f);
+        const el = document.getElementById(f);
+        if (stored && el) el.value = stored;
+      }
+    });
+  })();
+
   // Modal
   function openModal(e) {
     if (e) e.preventDefault();
