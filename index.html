@@ -729,23 +729,45 @@
     if (e.target === document.getElementById('modalOverlay')) closeModal();
   }
 
-  // Form submit → Formspree
+  // Form submit → Formspree + XLeads
   function submitForm(e) {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
-    data.append('address', document.getElementById('hiddenAddress').value);
+    const address = document.getElementById('hiddenAddress').value;
+    data.append('address', address);
 
+    // Capture field values before async call
+    const nameVal  = (form.querySelector('input[name="name"]')  || {}).value || '';
+    const phoneVal = (form.querySelector('input[type="tel"]')    || {}).value || '';
+    const emailVal = (form.querySelector('input[type="email"]')  || {}).value || '';
+
+    function submitToXLeads() {
+      const xl = document.createElement('form');
+      xl.method = 'POST';
+      xl.action = 'https://awesome.realeflow.com/Contacts/Submit?id=352255&type=1&ar=1397925&redirect=https://bluegrasscashoffers.com/thank-you&source=PPC%20Website';
+      xl.style.display = 'none';
+      const fields = {
+        'SellerWizard$ownerName':        nameVal,
+        'SellerWizard$ownerMobilePhone': phoneVal.replace(/\D/g, ''),
+        'SellerWizard$ownerEmail':       emailVal,
+        'SellerWizard$propertyAddress':  address
+      };
+      Object.keys(fields).forEach(function(k) {
+        const inp = document.createElement('input');
+        inp.type = 'hidden'; inp.name = k; inp.value = fields[k];
+        xl.appendChild(inp);
+      });
+      document.body.appendChild(xl);
+      xl.submit(); // XLeads handles redirect to /thank-you
+    }
+
+    // Fire Formspree first (email notification), then XLeads
     fetch('https://formspree.io/f/xpqgrplo', {
       method: 'POST',
       body: data,
       headers: { 'Accept': 'application/json' }
-    }).then(() => {
-      window.location.href = '/thank-you';
-    }).catch(() => {
-      document.getElementById('formContent').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    });
+    }).then(submitToXLeads).catch(submitToXLeads);
   }
 
   // FAQ accordion
