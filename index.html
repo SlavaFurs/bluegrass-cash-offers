@@ -31,8 +31,8 @@
       --border: #dde4ee;
       --green:  #16a34a;
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.65; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; line-height: 1.65; overflow-x: hidden; }
 
     /* ── TOP BAR ── */
     .topbar {
@@ -338,6 +338,9 @@
       .compare-wrap { grid-template-columns: 1fr; }
       .cta-buttons { flex-direction: column; align-items: center; }
       .logo-text span:first-child { font-size: 1rem; }
+      .about-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .about-stats { grid-template-columns: 1fr 1fr !important; }
+      .modal { padding: 1.8rem 1.2rem; }
     }
   </style>
 </head>
@@ -577,7 +580,7 @@
 <!-- ABOUT -->
 <section style="background: var(--off);">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+    <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
       <div>
         <img src="assets/images/slava-founder.jpg" alt="Slava Furs — Founder, Bluegrass Cash Offers" style="width: 100%; height: 280px; object-fit: cover; object-position: right 15%; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,.15);">
         <div class="section-label">Who We Are</div>
